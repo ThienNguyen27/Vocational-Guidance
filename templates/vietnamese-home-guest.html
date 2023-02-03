@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0">
+    <title>Khách</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="box">
+    <div class="container">
+        <div class="navbar">
+            <img src="/static/images/logo.png" class="logo">
+
+            <lang>
+                <ul class="language">
+                    <li><a href="{{url_for('index_eng')}}">English</a></li>
+                    &nbsp;
+                    <li><a href="{{url_for('login_vn')}}">Đăng nhập</a></li>
+                    &nbsp;
+                    <li><a href="{{url_for('signup_vn')}}">Đăng ký</a></li>
+                    &nbsp;
+                    <li><a href="{{url_for('contact_vn')}}">Về chúng tôi</a></li>
+                </ul>
+            </lang>
+        </div>
+        <div class="row">
+            <div class="col">
+                <h1>Hướng dẫn</h1>
+                <h1>Chọn nghề</h1>
+                <br>
+                <p>Bài kiểm tra chính xác và miễn phí để tìm nghề nghiệp lý tưởng của bạn</p>
+                <br>
+                <h3 style="color: red">Đăng nhập để làm bài kiểm tra</h3>
+            </div>
+        </div>
+    </div>
+    </div>
+</body>
+</html>

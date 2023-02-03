@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/static/style.css" >
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+  <script src="/static/index.js"></script>
+  <title>Đăng nhập</title>
+</head>
+<body>
+  <div class="box">
+    <div class="navbar">
+      <a href="{{url_for('index_vn')}}"><img src="static/images/logo.png" class="logo"></a>
+    </div>
+    <div class="language">
+      <label><a href="{{url_for('login_eng')}}">English</a></label>
+    </div>
+    <div class="containerlogin">
+
+      <form method="POST">
+        <div class="input-field">  
+          <input type="text" class="input" name="email" placeholder="Email" required>
+          <i class="bx bx-envelope" ></i>
+        </div>
+        <br>
+      <div class="input-field">
+        <input type="text" class="input" name="username" placeholder="Tên đăng nhập" required>
+        <i class="bx bx-user"></i>
+      </div>
+      <br>
+      <div class="input-field">
+        <input type="Password" class="input" name="password" placeholder="Mật khẩu" required>
+        <i class="bx bx-lock-alt"></i>
+      </div>
+      <br>
+      <div class="input-field">
+        <input type="submit" class="submit" value="Đăng nhập">
+      </div>
+      <br>
+      <!-- <div class="two-col">
+        <div class="one">
+          <input type="checkbox" name="" id="check">
+          <label for="check">Ghi nhớ tôi</label>
+        </div>
+        <div class="two">
+          <label><a href="#">Quên mật khẩu?</a></label>
+        </div>
+      </div> -->
+      <br>
+      
+    </form>
+
+<div class="signup">
+  <label><a href="{{url_for('signup_vn')}}">Đăng ký</a></label>
+</div>
+{% extends "flash.html" %} {% block title %}Login{% endblock %} {% block content%}
+{% endblock %}  
+
+</div>
+
+</div>  
+
+
+
+<script
+src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+crossorigin="anonymous"
+></script>
+<script
+src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+crossorigin="anonymous"
+></script>
+</body>
+
+
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="/static/style.css" rel="stylesheet" >
+<script src="/static/index.js"></script>
+<title>User</title>
+    <link
+    rel="stylesheet"
+    href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+    crossorigin="anonymous"
+    />
+    <link>
+</head>
+<body>
+    <div class="box">
+    <div class="container">
+        <div class="navbar">
+            <img src="/static/images/logo.png" class="logo">
+
+            <lang>
+                <ul class="language">
+                    <li><a href="{{url_for('index_vn')}}">Tiếng Việt</a></li>
+                    &nbsp;
+                    <li><a href="{{url_for('contact_eng')}}">About us</a></li> 
+                </ul>
+            </lang>
+        </div>
+
+
+<!-- welcome message -->
+<div class="welcome_noti" role = "alert" id="flash_noti" onclick="closeButton()">
+    {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %} 
+                {% for category, message in messages %} 
+                    {% if category == 'Error' %}
+                    <div class="callout" data-closable>
+                    <strong class="messages" >{{ message }}
+                    <span class="close">&times;</span> </strong>
+                    </div>
+                    {% else %}
+                    <div class="callout" data-closable>
+                    <strong class="messages" >{{ 'You have logged in as ' + message  }}
+                    <span class="closebtn">&times;</span> </strong>
+                    </div>
+                    {% endif %}
+                {% endfor %}
+            {% endif %}
+    {% endwith %} 
+</div>
+
+
+        <div class="row">
+            <div class="col">
+                <h1>Vocational</h1>
+                <h1>Guidance</h1>
+                <br>
+                <p>Accurate, Free Test to Find Your Ideal Career</p>
+                <a href="">                  
+                    <button type="button" class="explore">Take test</button>
+                </a>
+            </div>
+        </div>
+    </div>
+    </div>
+    <script
+    src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"
+  ></script>
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"
+  ></script>
+
+  <!-- <script
+    src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"
+  ></script> -->
+
+</body>
+</html>

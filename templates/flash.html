@@ -1,0 +1,71 @@
+<!DOCTYPE html> <!--flash message page-->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %} flash message page {% endblock %}</title>
+</head>
+<body>
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="/static/style.css" rel="stylesheet" >
+<link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+<script src="/static/index.js"></script>
+<title>Login</title>
+</head> 
+<body>
+
+
+<div class="containerlogin">
+
+
+<!-- flash message -->
+<div class="flash_noti" role = "alert" id="flash_noti" onclick="closeButton()">
+{% with messages = get_flashed_messages(with_categories=true) %}
+        {% if messages %} 
+            {% for category, message in messages %} 
+                {% if category == 'Error' %}
+                <div class="callout" data-closable>
+                    <strong class="messages" >{{ message }}
+                    <span class="close">&times;</span> </strong>
+                    </div>
+                {% else %}
+                <div class="callout" data-closable>
+                <strong class="messages" >{{ 'You have logged in as ' + message  }}
+                <span class="close">&times;</span> </strong>
+                </div>
+                {% endif %}
+            {% endfor %}
+        {% endif %}
+{% endwith %} 
+</div>
+
+
+
+    </div>
+
+
+
+<script
+src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+crossorigin="anonymous"
+></script>
+<script
+src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+crossorigin="anonymous"
+></script>
+
+
+
+
+</body>
+</html>
+</body>
+</html>

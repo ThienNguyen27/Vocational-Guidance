@@ -1,0 +1,2151 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="/static/test.css" rel="stylesheet" >
+<script src="/static/index.js"></script>
+<title>Bài kiểm tra</title>
+    <link
+    rel="stylesheet"
+    href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+    crossorigin="anonymous"
+    />
+    <link>
+</head>
+<body>
+    <!-- <div class="test_box"> -->
+    <!-- <div class="test_container"> -->
+        <div class="navbar">
+            <img src="/static/images/logo.png" class="logo">
+
+            <lang>
+                <ul class="language">
+                    <li><a href="{{url_for('index_eng')}}">English</a></li>
+                    &nbsp;
+                </ul>
+            </lang>
+        </div>
+        <div class="questions">
+        <form action="{{ url_for('predict_vn')}}" method="POST" >
+        <!-- <div class="questions"> -->
+                <label for="question1" ><h4 class="statement">Bạn thường làm quen được nhiều bạn mới.</h4></label> <br>
+                <div class="radio_wrapper"> 
+                Hoàn toàn không đồng tình &nbsp;
+                <label class="radio_button"> 
+                    <input type="radio" name="question1" value="-3"> 
+                    <span class="ball"></span>
+                </label>
+                <label  class="radio_button">
+                    <input type="radio" name="question1" value="-2"> 
+                    <span class="ball"></span>
+                </label>
+                <label  class="radio_button"> 
+                    <input type="radio" name="question1" value="-1"> 
+                    <span class="ball"></span>
+                </label>
+                <label class="radio_button">
+                    <input type="radio" name="question1" value="0"> 
+                    <span class="ball"></span>
+                </label>
+                <label class="radio_button">
+                    <input type="radio" name="question1" value="1"> 
+                    <span class="ball"></span>
+                </label>
+                <label  class="radio_button">
+                    <input type="radio" name="question1" value="2"> 
+                    <span class="ball"></span>
+                </label>
+                <label class="radio_button">
+                    <input type="radio" name="question1" value="3"> 
+                    <span class="ball"></span>
+                </label>
+                Hoàn toàn đồng tình
+            </div>
+            <br>
+
+            <label for="question2" ><h4 class="statement">Bạn dành nhiều thời gian để khám phá những chủ đề mới lạ khơi gợi cho bạn nhiều hứng thú.</h4></label> <br>
+                <div class="radio_wrapper"> 
+                Hoàn toàn không đồng tình &nbsp;
+                <label class="radio_button"> 
+                    <input type="radio" name="question2" value="-3"> 
+                    <span class="ball"></span>
+                </label>
+                <label  class="radio_button">
+                    <input type="radio" name="question2" value="-2"> 
+                    <span class="ball"></span>
+                </label>
+                <label  class="radio_button"> 
+                    <input type="radio" name="question2" value="-1"> 
+                    <span class="ball"></span>
+                </label>
+                <label class="radio_button">
+                    <input type="radio" name="question2" value="0"> 
+                    <span class="ball"></span>
+                </label>
+                <label class="radio_button">
+                    <input type="radio" name="question2" value="1"> 
+                    <span class="ball"></span>
+                </label>
+                <label  class="radio_button">
+                    <input type="radio" name="question2" value="2"> 
+                    <span class="ball"></span>
+                </label>
+                <label class="radio_button">
+                    <input type="radio" name="question2" value="3"> 
+                    <span class="ball"></span>
+                </label>
+                Hoàn toàn đồng tình
+            </div>
+            <br>
+            
+            <label for="question3" ><h4 class="statement">Bạn cũng thấy muốn khóc khi nhìn người khác bật khóc.</h4></label> <br>
+            <div class="radio_wrapper"> 
+            Hoàn toàn không đồng tình &nbsp;
+            <label class="radio_button"> 
+                <input type="radio" name="question3" value="-3"> 
+                <span class="ball"></span>
+            </label>
+            <label  class="radio_button">
+                <input type="radio" name="question3" value="-2"> 
+                <span class="ball"></span>
+            </label>
+            <label  class="radio_button"> 
+                <input type="radio" name="question3" value="-1"> 
+                <span class="ball"></span>
+            </label>
+            <label class="radio_button">
+                <input type="radio" name="question3" value="0"> 
+                <span class="ball"></span>
+            </label>
+            <label class="radio_button">
+                <input type="radio" name="question3" value="1"> 
+                <span class="ball"></span>
+            </label>
+            <label  class="radio_button">
+                <input type="radio" name="question3" value="2"> 
+                <span class="ball"></span>
+            </label>
+            <label class="radio_button">
+                <input type="radio" name="question3" value="3"> 
+                <span class="ball"></span>
+            </label>
+            Hoàn toàn đồng tình
+        </div>
+        <br>
+
+        <label for="question4" ><h4 class="statement">Bạn thường có kế hoạch dự phòng.</h4></label> <br>
+        <div class="radio_wrapper"> 
+        Hoàn toàn không đồng tình &nbsp;
+        <label class="radio_button"> 
+            <input type="radio" name="question4" value="-3"> 
+            <span class="ball"></span>
+        </label>
+        <label  class="radio_button">
+            <input type="radio" name="question4" value="-2"> 
+            <span class="ball"></span>
+        </label>
+        <label  class="radio_button"> 
+            <input type="radio" name="question4" value="-1"> 
+            <span class="ball"></span>
+        </label>
+        <label class="radio_button">
+            <input type="radio" name="question4" value="0"> 
+            <span class="ball"></span>
+        </label>
+        <label class="radio_button">
+            <input type="radio" name="question4" value="1"> 
+            <span class="ball"></span>
+        </label>
+        <label  class="radio_button">
+            <input type="radio" name="question4" value="2"> 
+            <span class="ball"></span>
+        </label>
+        <label class="radio_button">
+            <input type="radio" name="question4" value="3"> 
+            <span class="ball"></span>
+        </label>
+        Hoàn toàn đồng tình
+    </div>
+    <br>
+
+    <label for="question5" ><h4 class="statement">Bạn thường giữ được sự bình tĩnh kể cả khi chịu đựng áp lực lớn.</h4></label> <br>
+    <div class="radio_wrapper"> 
+    Hoàn toàn không đồng tình &nbsp;
+    <label class="radio_button"> 
+        <input type="radio" name="question5" value="-3"> 
+        <span class="ball"></span>
+    </label>
+    <label  class="radio_button">
+        <input type="radio" name="question5" value="-2"> 
+        <span class="ball"></span>
+    </label>
+    <label  class="radio_button"> 
+        <input type="radio" name="question5" value="-1"> 
+        <span class="ball"></span>
+    </label>
+    <label class="radio_button">
+        <input type="radio" name="question5" value="0"> 
+        <span class="ball"></span>
+    </label>
+    <label class="radio_button">
+        <input type="radio" name="question5" value="1"> 
+        <span class="ball"></span>
+    </label>
+    <label  class="radio_button">
+        <input type="radio" name="question5" value="2"> 
+        <span class="ball"></span>
+    </label>
+    <label class="radio_button">
+        <input type="radio" name="question5" value="3"> 
+        <span class="ball"></span>
+    </label>
+    Hoàn toàn đồng tình
+</div>
+<br>
+
+<label for="question6" ><h4 class="statement">Ở những sự kiện, bạn hiếm khi giới thiệu mình với người lạ mà hầu như chỉ nói chuyện với những người bạn đã quen biết.</h4></label> <br>
+<div class="radio_wrapper"> 
+Hoàn toàn không đồng tình &nbsp;
+<label class="radio_button"> 
+    <input type="radio" name="question6" value="-3"> 
+    <span class="ball"></span>
+</label>
+<label  class="radio_button">
+    <input type="radio" name="question6" value="-2"> 
+    <span class="ball"></span>
+</label>
+<label  class="radio_button"> 
+    <input type="radio" name="question6" value="-1"> 
+    <span class="ball"></span>
+</label>
+<label class="radio_button">
+    <input type="radio" name="question6" value="0"> 
+    <span class="ball"></span>
+</label>
+<label class="radio_button">
+    <input type="radio" name="question6" value="1"> 
+    <span class="ball"></span>
+</label>
+<label  class="radio_button">
+    <input type="radio" name="question6" value="2"> 
+    <span class="ball"></span>
+</label>
+<label class="radio_button">
+    <input type="radio" name="question6" value="3"> 
+    <span class="ball"></span>
+</label>
+Hoàn toàn đồng tình
+</div>
+<br>
+
+<label for="question7" ><h4 class="statement">Bạn luôn ưu tiên hoàn thành việc đang làm trước khi bắt đầu một việc mới.</h4></label> <br>
+<div class="radio_wrapper"> 
+Hoàn toàn không đồng tình &nbsp;
+<label class="radio_button"> 
+    <input type="radio" name="question7" value="-3"> 
+    <span class="ball"></span>
+</label>
+<label  class="radio_button">
+    <input type="radio" name="question7" value="-2"> 
+    <span class="ball"></span>
+</label>
+<label  class="radio_button"> 
+    <input type="radio" name="question7" value="-1"> 
+    <span class="ball"></span>
+</label>
+<label class="radio_button">
+    <input type="radio" name="question7" value="0"> 
+    <span class="ball"></span>
+</label>
+<label class="radio_button">
+    <input type="radio" name="question7" value="1"> 
+    <span class="ball"></span>
+</label>
+<label  class="radio_button">
+    <input type="radio" name="question7" value="2"> 
+    <span class="ball"></span>
+</label>
+<label class="radio_button">
+    <input type="radio" name="question7" value="3"> 
+    <span class="ball"></span>
+</label>
+Hoàn toàn đồng tình
+</div>
+<br>
+
+<label for="question8" ><h4 class="statement">Bạn là một người rất đa cảm.</h4></label> <br>
+<div class="radio_wrapper"> 
+Hoàn toàn không đồng tình &nbsp;
+<label class="radio_button"> 
+    <input type="radio" name="question8" value="-3"> 
+    <span class="ball"></span>
+</label>
+<label  class="radio_button">
+    <input type="radio" name="question8" value="-2"> 
+    <span class="ball"></span>
+</label>
+<label  class="radio_button"> 
+    <input type="radio" name="question8" value="-1"> 
+    <span class="ball"></span>
+</label>
+<label class="radio_button">
+    <input type="radio" name="question8" value="0"> 
+    <span class="ball"></span>
+</label>
+<label class="radio_button">
+    <input type="radio" name="question8" value="1"> 
+    <span class="ball"></span>
+</label>
+<label  class="radio_button">
+    <input type="radio" name="question8" value="2"> 
+    <span class="ball"></span>
+</label>
+<label class="radio_button">
+    <input type="radio" name="question8" value="3"> 
+    <span class="ball"></span>
+</label>
+Hoàn toàn đồng tình
+</div>
+<br>
+
+<label for="question9" ><h4 class="statement">Bạn thích việc sử dụng những công cụ hỗ trợ tổ chức và sắp xếp, ví dụ như lên thời khóa biểu, danh sách.</h4></label> <br>
+<div class="radio_wrapper"> 
+Hoàn toàn không đồng tình &nbsp;
+<label class="radio_button"> 
+    <input type="radio" name="question9" value="-3"> 
+    <span class="ball"></span>
+</label>
+<label  class="radio_button">
+    <input type="radio" name="question9" value="-2"> 
+    <span class="ball"></span>
+</label>
+<label  class="radio_button"> 
+    <input type="radio" name="question9" value="-1"> 
+    <span class="ball"></span>
+</label>
+<label class="radio_button">
+    <input type="radio" name="question9" value="0"> 
+    <span class="ball"></span>
+</label>
+<label class="radio_button">
+    <input type="radio" name="question9" value="1"> 
+    <span class="ball"></span>
+</label>
+<label  class="radio_button">
+    <input type="radio" name="question9" value="2"> 
+    <span class="ball"></span>
+</label>
+<label class="radio_button">
+    <input type="radio" name="question9" value="3"> 
+    <span class="ball"></span>
+</label>
+Hoàn toàn đồng tình
+</div>
+<br>
+
+<label for="question10" ><h4 class="statement">Việc mắc một lỗi nhỏ cũng khiến bạn hoài nghi về năng lực và kiến thức của bản thân.</h4></label> <br>
+<div class="radio_wrapper"> 
+Hoàn toàn không đồng tình &nbsp;
+<label class="radio_button"> 
+    <input type="radio" name="question10" value="-3"> 
+    <span class="ball"></span>
+</label>
+<label  class="radio_button">
+    <input type="radio" name="question10" value="-2"> 
+    <span class="ball"></span>
+</label>
+<label  class="radio_button"> 
+    <input type="radio" name="question10" value="-1"> 
+    <span class="ball"></span>
+</label>
+<label class="radio_button">
+    <input type="radio" name="question10" value="0"> 
+    <span class="ball"></span>
+</label>
+<label class="radio_button">
+    <input type="radio" name="question10" value="1"> 
+    <span class="ball"></span>
+</label>
+<label  class="radio_button">
+    <input type="radio" name="question10" value="2"> 
+    <span class="ball"></span>
+</label>
+<label class="radio_button">
+    <input type="radio" name="question10" value="3"> 
+    <span class="ball"></span>
+</label>
+Hoàn toàn đồng tình
+</div>
+<br>
+
+<label for="question11" ><h4 class="statement">Bạn cảm thấy thoải mái với việc bắt chuyện với những người mà bạn thấy thú vị.</h4></label> <br>
+<div class="radio_wrapper"> 
+Hoàn toàn không đồng tình &nbsp;
+<label class="radio_button"> 
+    <input type="radio" name="question11" value="-3"> 
+    <span class="ball"></span>
+</label>
+<label  class="radio_button">
+    <input type="radio" name="question11" value="-2"> 
+    <span class="ball"></span>
+</label>
+<label  class="radio_button"> 
+    <input type="radio" name="question11" value="-1"> 
+    <span class="ball"></span>
+</label>
+<label class="radio_button">
+    <input type="radio" name="question11" value="0"> 
+    <span class="ball"></span>
+</label>
+<label class="radio_button">
+    <input type="radio" name="question11" value="1"> 
+    <span class="ball"></span>
+</label>
+<label  class="radio_button">
+    <input type="radio" name="question11" value="2"> 
+    <span class="ball"></span>
+</label>
+<label class="radio_button">
+    <input type="radio" name="question11" value="3"> 
+    <span class="ball"></span>
+</label>
+Hoàn toàn đồng tình
+</div>
+<br>
+
+<label for="question12" ><h4 class="statement">Bạn không hứng thú với việc thảo luận về các góc nhìn hoặc phân tích các tác phẩm nghệ thuật.</h4></label> <br>
+<div class="radio_wrapper"> 
+Hoàn toàn không đồng tình &nbsp;
+<label class="radio_button"> 
+    <input type="radio" name="question12" value="-3"> 
+    <span class="ball"></span>
+</label>
+<label  class="radio_button">
+    <input type="radio" name="question12" value="-2"> 
+    <span class="ball"></span>
+</label>
+<label  class="radio_button"> 
+    <input type="radio" name="question12" value="-1"> 
+    <span class="ball"></span>
+</label>
+<label class="radio_button">
+    <input type="radio" name="question12" value="0"> 
+    <span class="ball"></span>
+</label>
+<label class="radio_button">
+    <input type="radio" name="question12" value="1"> 
+    <span class="ball"></span>
+</label>
+<label  class="radio_button">
+    <input type="radio" name="question12" value="2"> 
+    <span class="ball"></span>
+</label>
+<label class="radio_button">
+    <input type="radio" name="question12" value="3"> 
+    <span class="ball"></span>
+</label>
+Hoàn toàn đồng tình
+</div>
+<br>
+
+<label for="question13" ><h4 class="statement">Bạn có xu hướng đặt lý trí lên trước cảm xúc cá nhân.</h4></label> <br>
+<div class="radio_wrapper"> 
+Hoàn toàn không đồng tình &nbsp;
+<label class="radio_button"> 
+<input type="radio" name="question13" value="-3"> 
+<span class="ball"></span>
+</label>
+<label  class="radio_button">
+<input type="radio" name="question13" value="-2"> 
+<span class="ball"></span>
+</label>
+<label  class="radio_button"> 
+<input type="radio" name="question13" value="-1"> 
+<span class="ball"></span>
+</label>
+<label class="radio_button">
+<input type="radio" name="question13" value="0"> 
+<span class="ball"></span>
+</label>
+<label class="radio_button">
+<input type="radio" name="question13" value="1"> 
+<span class="ball"></span>
+</label>
+<label  class="radio_button">
+<input type="radio" name="question13" value="2"> 
+<span class="ball"></span>
+</label>
+<label class="radio_button">
+<input type="radio" name="question13" value="3"> 
+<span class="ball"></span>
+</label>
+Hoàn toàn đồng tình
+</div>
+<br>
+
+<label for="question14" ><h4 class="statement">Bạn yêu thích làm việc dựa trên cảm hứng hơn là lên kế hoạch hằng ngày.</h4></label> <br>
+<div class="radio_wrapper"> 
+Hoàn toàn không đồng tình &nbsp;
+<label class="radio_button"> 
+<input type="radio" name="question14" value="-3"> 
+<span class="ball"></span>
+</label>
+<label  class="radio_button">
+<input type="radio" name="question14" value="-2"> 
+<span class="ball"></span>
+</label>
+<label  class="radio_button"> 
+<input type="radio" name="question14" value="-1"> 
+<span class="ball"></span>
+</label>
+<label class="radio_button">
+<input type="radio" name="question14" value="0"> 
+<span class="ball"></span>
+</label>
+<label class="radio_button">
+<input type="radio" name="question14" value="1"> 
+<span class="ball"></span>
+</label>
+<label  class="radio_button">
+<input type="radio" name="question14" value="2"> 
+<span class="ball"></span>
+</label>
+<label class="radio_button">
+<input type="radio" name="question14" value="3"> 
+<span class="ball"></span>
+</label>
+Hoàn toàn đồng tình
+</div>
+<br>
+
+<label for="question15" ><h4 class="statement">Bạn ít khi lo lắng rằng mình có gây ấn tượng tốt với những người bạn gặp.</h4></label> <br>
+<div class="radio_wrapper"> 
+Hoàn toàn không đồng tình &nbsp;
+<label class="radio_button"> 
+<input type="radio" name="question15" value="-3"> 
+<span class="ball"></span>
+</label>
+<label  class="radio_button">
+<input type="radio" name="question15" value="-2"> 
+<span class="ball"></span>
+</label>
+<label  class="radio_button"> 
+<input type="radio" name="question15" value="-1"> 
+<span class="ball"></span>
+</label>
+<label class="radio_button">
+<input type="radio" name="question15" value="0"> 
+<span class="ball"></span>
+</label>
+<label class="radio_button">
+<input type="radio" name="question15" value="1"> 
+<span class="ball"></span>
+</label>
+<label  class="radio_button">
+<input type="radio" name="question15" value="2"> 
+<span class="ball"></span>
+</label>
+<label class="radio_button">
+<input type="radio" name="question15" value="3"> 
+<span class="ball"></span>
+</label>
+Hoàn toàn đồng tình
+</div>
+<br>
+
+<label for="question16" ><h4 class="statement">Bạn yêu thích việc tham gia các hoạt động nhóm.</h4></label> <br>
+<div class="radio_wrapper"> 
+Hoàn toàn không đồng tình &nbsp;
+<label class="radio_button"> 
+<input type="radio" name="question16" value="-3"> 
+<span class="ball"></span>
+</label>
+<label  class="radio_button">
+<input type="radio" name="question16" value="-2"> 
+<span class="ball"></span>
+</label>
+<label  class="radio_button"> 
+<input type="radio" name="question16" value="-1"> 
+<span class="ball"></span>
+</label>
+<label class="radio_button">
+<input type="radio" name="question16" value="0"> 
+<span class="ball"></span>
+</label>
+<label class="radio_button">
+<input type="radio" name="question16" value="1"> 
+<span class="ball"></span>
+</label>
+<label  class="radio_button">
+<input type="radio" name="question16" value="2"> 
+<span class="ball"></span>
+</label>
+<label class="radio_button">
+<input type="radio" name="question16" value="3"> 
+<span class="ball"></span>
+</label>
+Hoàn toàn đồng tình
+</div>
+<br>
+
+<label for="question17" ><h4 class="statement">Bạn thích những bộ phim hoặc quyển sách nào có thể khiến bạn tò mò tưởng tượng ra một đoạn kết khác theo ý của mình.</h4></label> <br>
+<div class="radio_wrapper"> 
+Hoàn toàn không đồng tình &nbsp;
+<label class="radio_button"> 
+<input type="radio" name="question17" value="-3"> 
+<span class="ball"></span>
+</label>
+<label  class="radio_button">
+<input type="radio" name="question17" value="-2"> 
+<span class="ball"></span>
+</label>
+<label  class="radio_button"> 
+<input type="radio" name="question17" value="-1"> 
+<span class="ball"></span>
+</label>
+<label class="radio_button">
+<input type="radio" name="question17" value="0"> 
+<span class="ball"></span>
+</label>
+<label class="radio_button">
+<input type="radio" name="question17" value="1"> 
+<span class="ball"></span>
+</label>
+<label  class="radio_button">
+<input type="radio" name="question17" value="2"> 
+<span class="ball"></span>
+</label>
+<label class="radio_button">
+<input type="radio" name="question17" value="3"> 
+<span class="ball"></span>
+</label>
+Hoàn toàn đồng tình
+</div>
+<br>
+
+<label for="question18" ><h4 class="statement">Việc giúp đỡ người khác đạt được những thành tựu khiến bạn cảm thấy hạnh phúc hơn việc bản thân đạt được những thành tựu.</h4></label> <br>
+<div class="radio_wrapper"> 
+Hoàn toàn không đồng tình &nbsp;
+<label class="radio_button"> 
+<input type="radio" name="question18" value="-3"> 
+<span class="ball"></span>
+</label>
+<label  class="radio_button">
+<input type="radio" name="question18" value="-2"> 
+<span class="ball"></span>
+</label>
+<label  class="radio_button"> 
+<input type="radio" name="question18" value="-1"> 
+<span class="ball"></span>
+</label>
+<label class="radio_button">
+<input type="radio" name="question18" value="0"> 
+<span class="ball"></span>
+</label>
+<label class="radio_button">
+<input type="radio" name="question18" value="1"> 
+<span class="ball"></span>
+</label>
+<label  class="radio_button">
+<input type="radio" name="question18" value="2"> 
+<span class="ball"></span>
+</label>
+<label class="radio_button">
+<input type="radio" name="question18" value="3"> 
+<span class="ball"></span>
+</label>
+Hoàn toàn đồng tình
+</div>
+<br>
+
+<label for="question19" ><h4 class="statement">Bạn có quá nhiều sở thích và chúng làm bạn khó lựa chọn được sẽ làm thử gì tiếp theo.</h4></label> <br>
+<div class="radio_wrapper"> 
+Hoàn toàn không đồng tình &nbsp;
+<label class="radio_button"> 
+<input type="radio" name="question19" value="-3"> 
+<span class="ball"></span>
+</label>
+<label  class="radio_button">
+<input type="radio" name="question19" value="-2"> 
+<span class="ball"></span>
+</label>
+<label  class="radio_button"> 
+<input type="radio" name="question19" value="-1"> 
+<span class="ball"></span>
+</label>
+<label class="radio_button">
+<input type="radio" name="question19" value="0"> 
+<span class="ball"></span>
+</label>
+<label class="radio_button">
+<input type="radio" name="question19" value="1"> 
+<span class="ball"></span>
+</label>
+<label  class="radio_button">
+<input type="radio" name="question19" value="2"> 
+<span class="ball"></span>
+</label>
+<label class="radio_button">
+<input type="radio" name="question19" value="3"> 
+<span class="ball"></span>
+</label>
+Hoàn toàn đồng tình
+</div>
+<br>
+
+<label for="question20" ><h4 class="statement">Bạn dễ bị lo lắng rằng mọi việc có thể trở nên tệ hơn.</h4></label> <br>
+<div class="radio_wrapper"> 
+Hoàn toàn không đồng tình &nbsp;
+<label class="radio_button"> 
+<input type="radio" name="question20" value="-3"> 
+<span class="ball"></span>
+</label>
+<label  class="radio_button">
+<input type="radio" name="question20" value="-2"> 
+<span class="ball"></span>
+</label>
+<label  class="radio_button"> 
+<input type="radio" name="question20" value="-1"> 
+<span class="ball"></span>
+</label>
+<label class="radio_button">
+<input type="radio" name="question20" value="0"> 
+<span class="ball"></span>
+</label>
+<label class="radio_button">
+<input type="radio" name="question20" value="1"> 
+<span class="ball"></span>
+</label>
+<label  class="radio_button">
+<input type="radio" name="question20" value="2"> 
+<span class="ball"></span>
+</label>
+<label class="radio_button">
+<input type="radio" name="question20" value="3"> 
+<span class="ball"></span>
+</label>
+Hoàn toàn đồng tình
+</div>
+<br>
+
+<label for="question21" ><h4 class="statement">Bạn thường tránh vai trò lãnh đạo trong nhóm.</h4></label> <br>
+<div class="radio_wrapper"> 
+Hoàn toàn không đồng tình &nbsp;
+<label class="radio_button"> 
+    <input type="radio" name="question21" value="-3"> 
+    <span class="ball"></span>
+</label>
+<label  class="radio_button">
+    <input type="radio" name="question21" value="-2"> 
+    <span class="ball"></span>
+</label>
+<label  class="radio_button"> 
+    <input type="radio" name="question21" value="-1"> 
+    <span class="ball"></span>
+</label>
+<label class="radio_button">
+    <input type="radio" name="question21" value="0"> 
+    <span class="ball"></span>
+</label>
+<label class="radio_button">
+    <input type="radio" name="question21" value="1"> 
+    <span class="ball"></span>
+</label>
+<label  class="radio_button">
+    <input type="radio" name="question21" value="2"> 
+    <span class="ball"></span>
+</label>
+<label class="radio_button">
+    <input type="radio" name="question21" value="3"> 
+    <span class="ball"></span>
+</label>
+Hoàn toàn đồng tình
+</div>
+<br>
+
+<label for="question22" ><h4 class="statement">Bạn chắc chắn không phải là một người có tâm hồn nghệ sĩ.</h4></label> <br>
+<div class="radio_wrapper"> 
+Hoàn toàn không đồng tình &nbsp;
+<label class="radio_button"> 
+    <input type="radio" name="question22" value="-3"> 
+    <span class="ball"></span>
+</label>
+<label  class="radio_button">
+    <input type="radio" name="question22" value="-2"> 
+    <span class="ball"></span>
+</label>
+<label  class="radio_button"> 
+    <input type="radio" name="question22" value="-1"> 
+    <span class="ball"></span>
+</label>
+<label class="radio_button">
+    <input type="radio" name="question22" value="0"> 
+    <span class="ball"></span>
+</label>
+<label class="radio_button">
+    <input type="radio" name="question22" value="1"> 
+    <span class="ball"></span>
+</label>
+<label  class="radio_button">
+    <input type="radio" name="question22" value="2"> 
+    <span class="ball"></span>
+</label>
+<label class="radio_button">
+    <input type="radio" name="question22" value="3"> 
+    <span class="ball"></span>
+</label>
+Hoàn toàn đồng tình
+</div>
+<br>
+
+<label for="question23" ><h4 class="statement">Bạn quan niệm rằng thế giới sẽ tốt hơn nếu mọi người dựa vào lý trí hơn là cảm xúc.</h4></label> <br>
+<div class="radio_wrapper"> 
+Hoàn toàn không đồng tình &nbsp;
+<label class="radio_button"> 
+<input type="radio" name="question23" value="-3"> 
+<span class="ball"></span>
+</label>
+<label  class="radio_button">
+<input type="radio" name="question23" value="-2"> 
+<span class="ball"></span>
+</label>
+<label  class="radio_button"> 
+<input type="radio" name="question23" value="-1"> 
+<span class="ball"></span>
+</label>
+<label class="radio_button">
+<input type="radio" name="question23" value="0"> 
+<span class="ball"></span>
+</label>
+<label class="radio_button">
+<input type="radio" name="question23" value="1"> 
+<span class="ball"></span>
+</label>
+<label  class="radio_button">
+<input type="radio" name="question23" value="2"> 
+<span class="ball"></span>
+</label>
+<label class="radio_button">
+<input type="radio" name="question23" value="3"> 
+<span class="ball"></span>
+</label>
+Hoàn toàn đồng tình
+</div>
+<br>
+
+<label for="question24" ><h4 class="statement">Bạn lựa chọn hoàn thành việc nhà trước khi nghỉ ngơi.</h4></label> <br>
+<div class="radio_wrapper"> 
+Hoàn toàn không đồng tình &nbsp;
+<label class="radio_button"> 
+<input type="radio" name="question24" value="-3"> 
+<span class="ball"></span>
+</label>
+<label  class="radio_button">
+<input type="radio" name="question24" value="-2"> 
+<span class="ball"></span>
+</label>
+<label  class="radio_button"> 
+<input type="radio" name="question24" value="-1"> 
+<span class="ball"></span>
+</label>
+<label class="radio_button">
+<input type="radio" name="question24" value="0"> 
+<span class="ball"></span>
+</label>
+<label class="radio_button">
+<input type="radio" name="question24" value="1"> 
+<span class="ball"></span>
+</label>
+<label  class="radio_button">
+<input type="radio" name="question24" value="2"> 
+<span class="ball"></span>
+</label>
+<label class="radio_button">
+<input type="radio" name="question24" value="3"> 
+<span class="ball"></span>
+</label>
+Hoàn toàn đồng tình
+</div>
+<br>
+
+<label for="question25" ><h4 class="statement">Bạn thích xem người khác tranh luận.</h4></label> <br>
+<div class="radio_wrapper"> 
+Hoàn toàn không đồng tình &nbsp;
+<label class="radio_button"> 
+<input type="radio" name="question25" value="-3"> 
+<span class="ball"></span>
+</label>
+<label  class="radio_button">
+<input type="radio" name="question25" value="-2"> 
+<span class="ball"></span>
+</label>
+<label  class="radio_button"> 
+<input type="radio" name="question25" value="-1"> 
+<span class="ball"></span>
+</label>
+<label class="radio_button">
+<input type="radio" name="question25" value="0"> 
+<span class="ball"></span>
+</label>
+<label class="radio_button">
+<input type="radio" name="question25" value="1"> 
+<span class="ball"></span>
+</label>
+<label  class="radio_button">
+<input type="radio" name="question25" value="2"> 
+<span class="ball"></span>
+</label>
+<label class="radio_button">
+<input type="radio" name="question25" value="3"> 
+<span class="ball"></span>
+</label>
+Hoàn toàn đồng tình
+</div>
+<br>
+
+<label for="question26" ><h4 class="statement">Bạn có khuynh hướng tránh thu hút sự chú ý về phía mình.</h4></label> <br>
+<div class="radio_wrapper"> 
+Hoàn toàn không đồng tình &nbsp;
+<label class="radio_button"> 
+<input type="radio" name="question26" value="-3"> 
+<span class="ball"></span>
+</label>
+<label  class="radio_button">
+<input type="radio" name="question26" value="-2"> 
+<span class="ball"></span>
+</label>
+<label  class="radio_button"> 
+<input type="radio" name="question26" value="-1"> 
+<span class="ball"></span>
+</label>
+<label class="radio_button">
+<input type="radio" name="question26" value="0"> 
+<span class="ball"></span>
+</label>
+<label class="radio_button">
+<input type="radio" name="question26" value="1"> 
+<span class="ball"></span>
+</label>
+<label  class="radio_button">
+<input type="radio" name="question26" value="2"> 
+<span class="ball"></span>
+</label>
+<label class="radio_button">
+<input type="radio" name="question26" value="3"> 
+<span class="ball"></span>
+</label>
+Hoàn toàn đồng tình
+</div>
+<br>
+
+<label for="question27" ><h4 class="statement">Tâm trạng của bạn dễ bị thay đổi.</h4></label> <br>
+<div class="radio_wrapper"> 
+Hoàn toàn không đồng tình &nbsp;
+<label class="radio_button"> 
+<input type="radio" name="question27" value="-3"> 
+<span class="ball"></span>
+</label>
+<label  class="radio_button">
+<input type="radio" name="question27" value="-2"> 
+<span class="ball"></span>
+</label>
+<label  class="radio_button"> 
+<input type="radio" name="question27" value="-1"> 
+<span class="ball"></span>
+</label>
+<label class="radio_button">
+<input type="radio" name="question27" value="0"> 
+<span class="ball"></span>
+</label>
+<label class="radio_button">
+<input type="radio" name="question27" value="1"> 
+<span class="ball"></span>
+</label>
+<label  class="radio_button">
+<input type="radio" name="question27" value="2"> 
+<span class="ball"></span>
+</label>
+<label class="radio_button">
+<input type="radio" name="question27" value="3"> 
+<span class="ball"></span>
+</label>
+Hoàn toàn đồng tình
+</div>
+<br>
+
+<label for="question28" ><h4 class="statement">Bạn dễ mất kiên nhẫn với những người làm việc không hiệu quả bằng bạn.</h4></label> <br>
+<div class="radio_wrapper"> 
+Hoàn toàn không đồng tình &nbsp;
+<label class="radio_button"> 
+<input type="radio" name="question28" value="-3"> 
+<span class="ball"></span>
+</label>
+<label  class="radio_button">
+<input type="radio" name="question28" value="-2"> 
+<span class="ball"></span>
+</label>
+<label  class="radio_button"> 
+<input type="radio" name="question28" value="-1"> 
+<span class="ball"></span>
+</label>
+<label class="radio_button">
+<input type="radio" name="question28" value="0"> 
+<span class="ball"></span>
+</label>
+<label class="radio_button">
+<input type="radio" name="question28" value="1"> 
+<span class="ball"></span>
+</label>
+<label  class="radio_button">
+<input type="radio" name="question28" value="2"> 
+<span class="ball"></span>
+</label>
+<label class="radio_button">
+<input type="radio" name="question28" value="3"> 
+<span class="ball"></span>
+</label>
+Hoàn toàn đồng tình
+</div>
+<br>
+
+<label for="question29" ><h4 class="statement">Bạn thường hoàn thành công việc vào lúc cuối cùng nhất có thể.</h4></label> <br>
+<div class="radio_wrapper"> 
+Hoàn toàn không đồng tình &nbsp;
+<label class="radio_button"> 
+<input type="radio" name="question29" value="-3"> 
+<span class="ball"></span>
+</label>
+<label  class="radio_button">
+<input type="radio" name="question29" value="-2"> 
+<span class="ball"></span>
+</label>
+<label  class="radio_button"> 
+<input type="radio" name="question29" value="-1"> 
+<span class="ball"></span>
+</label>
+<label class="radio_button">
+<input type="radio" name="question29" value="0"> 
+<span class="ball"></span>
+</label>
+<label class="radio_button">
+<input type="radio" name="question29" value="1"> 
+<span class="ball"></span>
+</label>
+<label  class="radio_button">
+<input type="radio" name="question29" value="2"> 
+<span class="ball"></span>
+</label>
+<label class="radio_button">
+<input type="radio" name="question29" value="3"> 
+<span class="ball"></span>
+</label>
+Hoàn toàn đồng tình
+</div>
+<br>
+
+<label for="question30" ><h4 class="statement">Bạn luôn băn khoăn về những câu hỏi về việc gì sẽ diễn ra sau cái chết.</h4></label> <br>
+<div class="radio_wrapper"> 
+Hoàn toàn không đồng tình &nbsp;
+<label class="radio_button"> 
+<input type="radio" name="question30" value="-3"> 
+<span class="ball"></span>
+</label>
+<label  class="radio_button">
+<input type="radio" name="question30" value="-2"> 
+<span class="ball"></span>
+</label>
+<label  class="radio_button"> 
+<input type="radio" name="question30" value="-1"> 
+<span class="ball"></span>
+</label>
+<label class="radio_button">
+<input type="radio" name="question30" value="0"> 
+<span class="ball"></span>
+</label>
+<label class="radio_button">
+<input type="radio" name="question30" value="1"> 
+<span class="ball"></span>
+</label>
+<label  class="radio_button">
+<input type="radio" name="question30" value="2"> 
+<span class="ball"></span>
+</label>
+<label class="radio_button">
+<input type="radio" name="question30" value="3"> 
+<span class="ball"></span>
+</label>
+Hoàn toàn đồng tình
+</div>
+<br>
+
+<label for="question31" ><h4 class="statement">Bạn thường thích việc ở gần người khác hơn là ở một mình.</h4></label> <br>
+<div class="radio_wrapper"> 
+Hoàn toàn không đồng tình &nbsp;
+<label class="radio_button"> 
+    <input type="radio" name="question31" value="-3"> 
+    <span class="ball"></span>
+</label>
+<label  class="radio_button">
+    <input type="radio" name="question31" value="-2"> 
+    <span class="ball"></span>
+</label>
+<label  class="radio_button"> 
+    <input type="radio" name="question31" value="-1"> 
+    <span class="ball"></span>
+</label>
+<label class="radio_button">
+    <input type="radio" name="question31" value="0"> 
+    <span class="ball"></span>
+</label>
+<label class="radio_button">
+    <input type="radio" name="question31" value="1"> 
+    <span class="ball"></span>
+</label>
+<label  class="radio_button">
+    <input type="radio" name="question31" value="2"> 
+    <span class="ball"></span>
+</label>
+<label class="radio_button">
+    <input type="radio" name="question31" value="3"> 
+    <span class="ball"></span>
+</label>
+Hoàn toàn đồng tình
+</div>
+<br>
+
+<label for="question32" ><h4 class="statement">Khi vấn đề tranh luận trở nên quá lý thuyết, bạn cảm thấy buồn chán và mất hết hứng thú.</h4></label> <br>
+<div class="radio_wrapper"> 
+Hoàn toàn không đồng tình &nbsp;
+<label class="radio_button"> 
+    <input type="radio" name="question32" value="-3"> 
+    <span class="ball"></span>
+</label>
+<label  class="radio_button">
+    <input type="radio" name="question32" value="-2"> 
+    <span class="ball"></span>
+</label>
+<label  class="radio_button"> 
+    <input type="radio" name="question32" value="-1"> 
+    <span class="ball"></span>
+</label>
+<label class="radio_button">
+    <input type="radio" name="question32" value="0"> 
+    <span class="ball"></span>
+</label>
+<label class="radio_button">
+    <input type="radio" name="question32" value="1"> 
+    <span class="ball"></span>
+</label>
+<label  class="radio_button">
+    <input type="radio" name="question32" value="2"> 
+    <span class="ball"></span>
+</label>
+<label class="radio_button">
+    <input type="radio" name="question32" value="3"> 
+    <span class="ball"></span>
+</label>
+Hoàn toàn đồng tình
+</div>
+<br>
+
+<label for="question33" ><h4 class="statement">Bạn cảm thấy dễ dàng đồng cảm với những người có trải nghiệm hoàn toàn khác bạn.</h4></label> <br>
+<div class="radio_wrapper"> 
+Hoàn toàn không đồng tình &nbsp;
+<label class="radio_button"> 
+<input type="radio" name="question33" value="-3"> 
+<span class="ball"></span>
+</label>
+<label  class="radio_button">
+<input type="radio" name="question33" value="-2"> 
+<span class="ball"></span>
+</label>
+<label  class="radio_button"> 
+<input type="radio" name="question33" value="-1"> 
+<span class="ball"></span>
+</label>
+<label class="radio_button">
+<input type="radio" name="question33" value="0"> 
+<span class="ball"></span>
+</label>
+<label class="radio_button">
+<input type="radio" name="question33" value="1"> 
+<span class="ball"></span>
+</label>
+<label  class="radio_button">
+<input type="radio" name="question33" value="2"> 
+<span class="ball"></span>
+</label>
+<label class="radio_button">
+<input type="radio" name="question33" value="3"> 
+<span class="ball"></span>
+</label>
+Hoàn toàn đồng tình
+</div>
+<br>
+
+<label for="question34" ><h4 class="statement">Bạn thường xuyên trì hoãn việc đưa ra lựa chọn cuối cùng.</h4></label> <br>
+<div class="radio_wrapper"> 
+Hoàn toàn không đồng tình &nbsp;
+<label class="radio_button"> 
+<input type="radio" name="question34" value="-3"> 
+<span class="ball"></span>
+</label>
+<label  class="radio_button">
+<input type="radio" name="question34" value="-2"> 
+<span class="ball"></span>
+</label>
+<label  class="radio_button"> 
+<input type="radio" name="question34" value="-1"> 
+<span class="ball"></span>
+</label>
+<label class="radio_button">
+<input type="radio" name="question34" value="0"> 
+<span class="ball"></span>
+</label>
+<label class="radio_button">
+<input type="radio" name="question34" value="1"> 
+<span class="ball"></span>
+</label>
+<label  class="radio_button">
+<input type="radio" name="question34" value="2"> 
+<span class="ball"></span>
+</label>
+<label class="radio_button">
+<input type="radio" name="question34" value="3"> 
+<span class="ball"></span>
+</label>
+Hoàn toàn đồng tình
+</div>
+<br>
+
+<label for="question35" ><h4 class="statement">Bạn hiếm khi nghi ngờ lựa chọn của bản thân.</h4></label> <br>
+<div class="radio_wrapper"> 
+Hoàn toàn không đồng tình &nbsp;
+<label class="radio_button"> 
+<input type="radio" name="question35" value="-3"> 
+<span class="ball"></span>
+</label>
+<label  class="radio_button">
+<input type="radio" name="question35" value="-2"> 
+<span class="ball"></span>
+</label>
+<label  class="radio_button"> 
+<input type="radio" name="question35" value="-1"> 
+<span class="ball"></span>
+</label>
+<label class="radio_button">
+<input type="radio" name="question35" value="0"> 
+<span class="ball"></span>
+</label>
+<label class="radio_button">
+<input type="radio" name="question35" value="1"> 
+<span class="ball"></span>
+</label>
+<label  class="radio_button">
+<input type="radio" name="question35" value="2"> 
+<span class="ball"></span>
+</label>
+<label class="radio_button">
+<input type="radio" name="question35" value="3"> 
+<span class="ball"></span>
+</label>
+Hoàn toàn đồng tình
+</div>
+<br>
+
+<label for="question36" ><h4 class="statement">Những gì bạn cần sau một tuần dài mệt mỏi là những sự kiện sôi động, náo nhiệt.</h4></label> <br>
+<div class="radio_wrapper"> 
+Hoàn toàn không đồng tình &nbsp;
+<label class="radio_button"> 
+<input type="radio" name="question36" value="-3"> 
+<span class="ball"></span>
+</label>
+<label  class="radio_button">
+<input type="radio" name="question36" value="-2"> 
+<span class="ball"></span>
+</label>
+<label  class="radio_button"> 
+<input type="radio" name="question36" value="-1"> 
+<span class="ball"></span>
+</label>
+<label class="radio_button">
+<input type="radio" name="question36" value="0"> 
+<span class="ball"></span>
+</label>
+<label class="radio_button">
+<input type="radio" name="question36" value="1"> 
+<span class="ball"></span>
+</label>
+<label  class="radio_button">
+<input type="radio" name="question36" value="2"> 
+<span class="ball"></span>
+</label>
+<label class="radio_button">
+<input type="radio" name="question36" value="3"> 
+<span class="ball"></span>
+</label>
+Hoàn toàn đồng tình
+</div>
+<br>
+
+<label for="question37" ><h4 class="statement">Bạn thích đi bảo tàng nghệ thuật.</h4></label> <br>
+<div class="radio_wrapper"> 
+Hoàn toàn không đồng tình &nbsp;
+<label class="radio_button"> 
+<input type="radio" name="question37" value="-3"> 
+<span class="ball"></span>
+</label>
+<label  class="radio_button">
+<input type="radio" name="question37" value="-2"> 
+<span class="ball"></span>
+</label>
+<label  class="radio_button"> 
+<input type="radio" name="question37" value="-1"> 
+<span class="ball"></span>
+</label>
+<label class="radio_button">
+<input type="radio" name="question37" value="0"> 
+<span class="ball"></span>
+</label>
+<label class="radio_button">
+<input type="radio" name="question37" value="1"> 
+<span class="ball"></span>
+</label>
+<label  class="radio_button">
+<input type="radio" name="question37" value="2"> 
+<span class="ball"></span>
+</label>
+<label class="radio_button">
+<input type="radio" name="question37" value="3"> 
+<span class="ball"></span>
+</label>
+Hoàn toàn đồng tình
+</div>
+<br>
+
+<label for="question38" ><h4 class="statement">Bạn thường gặp khó khăn trong việc thấu hiểu cảm xúc của người khác.</h4></label> <br>
+<div class="radio_wrapper"> 
+Hoàn toàn không đồng tình &nbsp;
+<label class="radio_button"> 
+<input type="radio" name="question38" value="-3"> 
+<span class="ball"></span>
+</label>
+<label  class="radio_button">
+<input type="radio" name="question38" value="-2"> 
+<span class="ball"></span>
+</label>
+<label  class="radio_button"> 
+<input type="radio" name="question38" value="-1"> 
+<span class="ball"></span>
+</label>
+<label class="radio_button">
+<input type="radio" name="question38" value="0"> 
+<span class="ball"></span>
+</label>
+<label class="radio_button">
+<input type="radio" name="question38" value="1"> 
+<span class="ball"></span>
+</label>
+<label  class="radio_button">
+<input type="radio" name="question38" value="2"> 
+<span class="ball"></span>
+</label>
+<label class="radio_button">
+<input type="radio" name="question38" value="3"> 
+<span class="ball"></span>
+</label>
+Hoàn toàn đồng tình
+</div>
+<br>
+
+<label for="question39" ><h4 class="statement">Bạn thích lên danh sách công việc cần làm hằng ngày.</h4></label> <br>
+<div class="radio_wrapper"> 
+Hoàn toàn không đồng tình &nbsp;
+<label class="radio_button"> 
+<input type="radio" name="question39" value="-3"> 
+<span class="ball"></span>
+</label>
+<label  class="radio_button">
+<input type="radio" name="question39" value="-2"> 
+<span class="ball"></span>
+</label>
+<label  class="radio_button"> 
+<input type="radio" name="question39" value="-1"> 
+<span class="ball"></span>
+</label>
+<label class="radio_button">
+<input type="radio" name="question39" value="0"> 
+<span class="ball"></span>
+</label>
+<label class="radio_button">
+<input type="radio" name="question39" value="1"> 
+<span class="ball"></span>
+</label>
+<label  class="radio_button">
+<input type="radio" name="question39" value="2"> 
+<span class="ball"></span>
+</label>
+<label class="radio_button">
+<input type="radio" name="question39" value="3"> 
+<span class="ball"></span>
+</label>
+Hoàn toàn đồng tình
+</div>
+<br>
+
+<label for="question40" ><h4 class="statement">Bạn ít khi cảm thấy thiếu an toàn. </h4></label> <br>
+<div class="radio_wrapper"> 
+Hoàn toàn không đồng tình &nbsp;
+<label class="radio_button"> 
+<input type="radio" name="question40" value="-3"> 
+<span class="ball"></span>
+</label>
+<label  class="radio_button">
+<input type="radio" name="question40" value="-2"> 
+<span class="ball"></span>
+</label>
+<label  class="radio_button"> 
+<input type="radio" name="question40" value="-1"> 
+<span class="ball"></span>
+</label>
+<label class="radio_button">
+<input type="radio" name="question40" value="0"> 
+<span class="ball"></span>
+</label>
+<label class="radio_button">
+<input type="radio" name="question40" value="1"> 
+<span class="ball"></span>
+</label>
+<label  class="radio_button">
+<input type="radio" name="question40" value="2"> 
+<span class="ball"></span>
+</label>
+<label class="radio_button">
+<input type="radio" name="question40" value="3"> 
+<span class="ball"></span>
+</label>
+Hoàn toàn đồng tình
+</div>
+<br>
+
+<label for="question41" ><h4 class="statement">Bạn thường tránh việc gọi điện.</h4></label> <br>
+<div class="radio_wrapper"> 
+Hoàn toàn không đồng tình &nbsp;
+<label class="radio_button"> 
+    <input type="radio" name="question41" value="-3"> 
+    <span class="ball"></span>
+</label>
+<label  class="radio_button">
+    <input type="radio" name="question41" value="-2"> 
+    <span class="ball"></span>
+</label>
+<label  class="radio_button"> 
+    <input type="radio" name="question41" value="-1"> 
+    <span class="ball"></span>
+</label>
+<label class="radio_button">
+    <input type="radio" name="question41" value="0"> 
+    <span class="ball"></span>
+</label>
+<label class="radio_button">
+    <input type="radio" name="question41" value="1"> 
+    <span class="ball"></span>
+</label>
+<label  class="radio_button">
+    <input type="radio" name="question41" value="2"> 
+    <span class="ball"></span>
+</label>
+<label class="radio_button">
+    <input type="radio" name="question41" value="3"> 
+    <span class="ball"></span>
+</label>
+Hoàn toàn đồng tình
+</div>
+<br>
+
+<label for="question42" ><h4 class="statement">Bạn dành khá nhiều thời gian để thử nghiệm những góc nhìn khác hoàn toàn với góc nhìn của bản thân.</h4></label> <br>
+<div class="radio_wrapper"> 
+Hoàn toàn không đồng tình &nbsp;
+<label class="radio_button"> 
+    <input type="radio" name="question42" value="-3"> 
+    <span class="ball"></span>
+</label>
+<label  class="radio_button">
+    <input type="radio" name="question42" value="-2"> 
+    <span class="ball"></span>
+</label>
+<label  class="radio_button"> 
+    <input type="radio" name="question42" value="-1"> 
+    <span class="ball"></span>
+</label>
+<label class="radio_button">
+    <input type="radio" name="question42" value="0"> 
+    <span class="ball"></span>
+</label>
+<label class="radio_button">
+    <input type="radio" name="question42" value="1"> 
+    <span class="ball"></span>
+</label>
+<label  class="radio_button">
+    <input type="radio" name="question42" value="2"> 
+    <span class="ball"></span>
+</label>
+<label class="radio_button">
+    <input type="radio" name="question42" value="3"> 
+    <span class="ball"></span>
+</label>
+Hoàn toàn đồng tình
+</div>
+<br>
+
+<label for="question43" ><h4 class="statement">Bạn thường là người chủ động liên hệ với người khác cũng như khới xưởng những hoạt động.</h4></label> <br>
+<div class="radio_wrapper"> 
+Hoàn toàn không đồng tình &nbsp;
+<label class="radio_button"> 
+<input type="radio" name="question43" value="-3"> 
+<span class="ball"></span>
+</label>
+<label  class="radio_button">
+<input type="radio" name="question43" value="-2"> 
+<span class="ball"></span>
+</label>
+<label  class="radio_button"> 
+<input type="radio" name="question43" value="-1"> 
+<span class="ball"></span>
+</label>
+<label class="radio_button">
+<input type="radio" name="question43" value="0"> 
+<span class="ball"></span>
+</label>
+<label class="radio_button">
+<input type="radio" name="question43" value="1"> 
+<span class="ball"></span>
+</label>
+<label  class="radio_button">
+<input type="radio" name="question43" value="2"> 
+<span class="ball"></span>
+</label>
+<label class="radio_button">
+<input type="radio" name="question43" value="3"> 
+<span class="ball"></span>
+</label>
+Hoàn toàn đồng tình
+</div>
+<br>
+
+<label for="question44" ><h4 class="statement">Khi kế hoạch không như dự tính, ưu tiên hàng đầu của bạn là đưa mọi việc trở về đúng với kế hoạch ban đầu càng sớm càng tốt.</h4></label> <br>
+<div class="radio_wrapper"> 
+Hoàn toàn không đồng tình &nbsp;
+<label class="radio_button"> 
+<input type="radio" name="question44" value="-3"> 
+<span class="ball"></span>
+</label>
+<label  class="radio_button">
+<input type="radio" name="question44" value="-2"> 
+<span class="ball"></span>
+</label>
+<label  class="radio_button"> 
+<input type="radio" name="question44" value="-1"> 
+<span class="ball"></span>
+</label>
+<label class="radio_button">
+<input type="radio" name="question44" value="0"> 
+<span class="ball"></span>
+</label>
+<label class="radio_button">
+<input type="radio" name="question44" value="1"> 
+<span class="ball"></span>
+</label>
+<label  class="radio_button">
+<input type="radio" name="question44" value="2"> 
+<span class="ball"></span>
+</label>
+<label class="radio_button">
+<input type="radio" name="question44" value="3"> 
+<span class="ball"></span>
+</label>
+Hoàn toàn đồng tình
+</div>
+<br>
+
+<label for="question45" ><h4 class="statement">Bạn vẫn còn để tâm những lỗi sai trong quá khứ.</h4></label> <br>
+<div class="radio_wrapper"> 
+Hoàn toàn không đồng tình &nbsp;
+<label class="radio_button"> 
+<input type="radio" name="question45" value="-3"> 
+<span class="ball"></span>
+</label>
+<label  class="radio_button">
+<input type="radio" name="question45" value="-2"> 
+<span class="ball"></span>
+</label>
+<label  class="radio_button"> 
+<input type="radio" name="question45" value="-1"> 
+<span class="ball"></span>
+</label>
+<label class="radio_button">
+<input type="radio" name="question45" value="0"> 
+<span class="ball"></span>
+</label>
+<label class="radio_button">
+<input type="radio" name="question45" value="1"> 
+<span class="ball"></span>
+</label>
+<label  class="radio_button">
+<input type="radio" name="question45" value="2"> 
+<span class="ball"></span>
+</label>
+<label class="radio_button">
+<input type="radio" name="question45" value="3"> 
+<span class="ball"></span>
+</label>
+Hoàn toàn đồng tình
+</div>
+<br>
+
+<label for="question46" ><h4 class="statement">Bạn ít khi nghiền ngẫm về lý do con người tồn tại cũng như ý nghĩa của cuộc sống.</h4></label> <br>
+<div class="radio_wrapper"> 
+Hoàn toàn không đồng tình &nbsp;
+<label class="radio_button"> 
+<input type="radio" name="question46" value="-3"> 
+<span class="ball"></span>
+</label>
+<label  class="radio_button">
+<input type="radio" name="question46" value="-2"> 
+<span class="ball"></span>
+</label>
+<label  class="radio_button"> 
+<input type="radio" name="question46" value="-1"> 
+<span class="ball"></span>
+</label>
+<label class="radio_button">
+<input type="radio" name="question46" value="0"> 
+<span class="ball"></span>
+</label>
+<label class="radio_button">
+<input type="radio" name="question46" value="1"> 
+<span class="ball"></span>
+</label>
+<label  class="radio_button">
+<input type="radio" name="question46" value="2"> 
+<span class="ball"></span>
+</label>
+<label class="radio_button">
+<input type="radio" name="question46" value="3"> 
+<span class="ball"></span>
+</label>
+Hoàn toàn đồng tình
+</div>
+<br>
+
+<label for="question47" ><h4 class="statement">Bạn bị cảm xúc kiểm soát hơn là bạn kiểm soát chúng.</h4></label> <br>
+<div class="radio_wrapper"> 
+Hoàn toàn không đồng tình &nbsp;
+<label class="radio_button"> 
+<input type="radio" name="question47" value="-3"> 
+<span class="ball"></span>
+</label>
+<label  class="radio_button">
+<input type="radio" name="question47" value="-2"> 
+<span class="ball"></span>
+</label>
+<label  class="radio_button"> 
+<input type="radio" name="question47" value="-1"> 
+<span class="ball"></span>
+</label>
+<label class="radio_button">
+<input type="radio" name="question47" value="0"> 
+<span class="ball"></span>
+</label>
+<label class="radio_button">
+<input type="radio" name="question47" value="1"> 
+<span class="ball"></span>
+</label>
+<label  class="radio_button">
+<input type="radio" name="question47" value="2"> 
+<span class="ball"></span>
+</label>
+<label class="radio_button">
+<input type="radio" name="question47" value="3"> 
+<span class="ball"></span>
+</label>
+Hoàn toàn đồng tình
+</div>
+<br>
+
+<label for="question48" ><h4 class="statement">Bạn luôn cố gắng giữ thể diện cho người khác kể cả khi đó là lỗi của họ.</h4></label> <br>
+<div class="radio_wrapper"> 
+Hoàn toàn không đồng tình &nbsp;
+<label class="radio_button"> 
+<input type="radio" name="question48" value="-3"> 
+<span class="ball"></span>
+</label>
+<label  class="radio_button">
+<input type="radio" name="question48" value="-2"> 
+<span class="ball"></span>
+</label>
+<label  class="radio_button"> 
+<input type="radio" name="question48" value="-1"> 
+<span class="ball"></span>
+</label>
+<label class="radio_button">
+<input type="radio" name="question48" value="0"> 
+<span class="ball"></span>
+</label>
+<label class="radio_button">
+<input type="radio" name="question48" value="1"> 
+<span class="ball"></span>
+</label>
+<label  class="radio_button">
+<input type="radio" name="question48" value="2"> 
+<span class="ball"></span>
+</label>
+<label class="radio_button">
+<input type="radio" name="question48" value="3"> 
+<span class="ball"></span>
+</label>
+Hoàn toàn đồng tình
+</div>
+<br>
+
+<label for="question49" ><h4 class="statement">Bạn thường làm việc tự phát hơn là lên kế hoạch sắp xếp từ trước.</h4></label> <br>
+<div class="radio_wrapper"> 
+Hoàn toàn không đồng tình &nbsp;
+<label class="radio_button"> 
+<input type="radio" name="question49" value="-3"> 
+<span class="ball"></span>
+</label>
+<label  class="radio_button">
+<input type="radio" name="question49" value="-2"> 
+<span class="ball"></span>
+</label>
+<label  class="radio_button"> 
+<input type="radio" name="question49" value="-1"> 
+<span class="ball"></span>
+</label>
+<label class="radio_button">
+<input type="radio" name="question49" value="0"> 
+<span class="ball"></span>
+</label>
+<label class="radio_button">
+<input type="radio" name="question49" value="1"> 
+<span class="ball"></span>
+</label>
+<label  class="radio_button">
+<input type="radio" name="question49" value="2"> 
+<span class="ball"></span>
+</label>
+<label class="radio_button">
+<input type="radio" name="question49" value="3"> 
+<span class="ball"></span>
+</label>
+Hoàn toàn đồng tình
+</div>
+<br>
+
+<label for="question50" ><h4 class="statement">Khi được người khác đánh giá cao, bạn thường suy nghĩ xem khi nào thì bạn sẽ gây thất vọng cho họ.</h4></label> <br>
+<div class="radio_wrapper"> 
+Hoàn toàn không đồng tình &nbsp;
+<label class="radio_button"> 
+<input type="radio" name="question50" value="-3"> 
+<span class="ball"></span>
+</label>
+<label  class="radio_button">
+<input type="radio" name="question50" value="-2"> 
+<span class="ball"></span>
+</label>
+<label  class="radio_button"> 
+<input type="radio" name="question50" value="-1"> 
+<span class="ball"></span>
+</label>
+<label class="radio_button">
+<input type="radio" name="question50" value="0"> 
+<span class="ball"></span>
+</label>
+<label class="radio_button">
+<input type="radio" name="question50" value="1"> 
+<span class="ball"></span>
+</label>
+<label  class="radio_button">
+<input type="radio" name="question50" value="2"> 
+<span class="ball"></span>
+</label>
+<label class="radio_button">
+<input type="radio" name="question50" value="3"> 
+<span class="ball"></span>
+</label>
+Hoàn toàn đồng tình
+</div>
+<br>
+
+<label for="question51" ><h4 class="statement">Bạn yêu thích những công việc cho phép bạn làm việc một mình trong hầu hết thời gian.</h4></label> <br>
+<div class="radio_wrapper"> 
+Hoàn toàn không đồng tình &nbsp;
+<label class="radio_button"> 
+    <input type="radio" name="question51" value="-3"> 
+    <span class="ball"></span>
+</label>
+<label  class="radio_button">
+    <input type="radio" name="question51" value="-2"> 
+    <span class="ball"></span>
+</label>
+<label  class="radio_button"> 
+    <input type="radio" name="question51" value="-1"> 
+    <span class="ball"></span>
+</label>
+<label class="radio_button">
+    <input type="radio" name="question51" value="0"> 
+    <span class="ball"></span>
+</label>
+<label class="radio_button">
+    <input type="radio" name="question51" value="1"> 
+    <span class="ball"></span>
+</label>
+<label  class="radio_button">
+    <input type="radio" name="question51" value="2"> 
+    <span class="ball"></span>
+</label>
+<label class="radio_button">
+    <input type="radio" name="question51" value="3"> 
+    <span class="ball"></span>
+</label>
+Hoàn toàn đồng tình
+</div>
+<br>
+
+<label for="question52" ><h4 class="statement">Bạn tin rằng việc suy ngẫm về những câu hỏi triết học là phí thời gian.</h4></label> <br>
+<div class="radio_wrapper"> 
+Hoàn toàn không đồng tình &nbsp;
+<label class="radio_button"> 
+    <input type="radio" name="question52" value="-3"> 
+    <span class="ball"></span>
+</label>
+<label  class="radio_button">
+    <input type="radio" name="question52" value="-2"> 
+    <span class="ball"></span>
+</label>
+<label  class="radio_button"> 
+    <input type="radio" name="question52" value="-1"> 
+    <span class="ball"></span>
+</label>
+<label class="radio_button">
+    <input type="radio" name="question52" value="0"> 
+    <span class="ball"></span>
+</label>
+<label class="radio_button">
+    <input type="radio" name="question52" value="1"> 
+    <span class="ball"></span>
+</label>
+<label  class="radio_button">
+    <input type="radio" name="question52" value="2"> 
+    <span class="ball"></span>
+</label>
+<label class="radio_button">
+    <input type="radio" name="question52" value="3"> 
+    <span class="ball"></span>
+</label>
+Hoàn toàn đồng tình
+</div>
+<br>
+
+<label for="question53" ><h4 class="statement">Bạn yêu thích những nơi bận rộn, bùng nổ hơn là những nơi yên ắng, tính lặng. </h4></label> <br>
+<div class="radio_wrapper"> 
+Hoàn toàn không đồng tình &nbsp;
+<label class="radio_button"> 
+<input type="radio" name="question53" value="-3"> 
+<span class="ball"></span>
+</label>
+<label  class="radio_button">
+<input type="radio" name="question53" value="-2"> 
+<span class="ball"></span>
+</label>
+<label  class="radio_button"> 
+<input type="radio" name="question53" value="-1"> 
+<span class="ball"></span>
+</label>
+<label class="radio_button">
+<input type="radio" name="question53" value="0"> 
+<span class="ball"></span>
+</label>
+<label class="radio_button">
+<input type="radio" name="question53" value="1"> 
+<span class="ball"></span>
+</label>
+<label  class="radio_button">
+<input type="radio" name="question53" value="2"> 
+<span class="ball"></span>
+</label>
+<label class="radio_button">
+<input type="radio" name="question53" value="3"> 
+<span class="ball"></span>
+</label>
+Hoàn toàn đồng tình
+</div>
+<br>
+
+<label for="question54" ><h4 class="statement">Bạn có thể hiểu được cảm xúc của người khác ngay từ ánh nhìn đầu tiên.</h4></label> <br>
+<div class="radio_wrapper"> 
+Hoàn toàn không đồng tình &nbsp;
+<label class="radio_button"> 
+<input type="radio" name="question54" value="-3"> 
+<span class="ball"></span>
+</label>
+<label  class="radio_button">
+<input type="radio" name="question54" value="-2"> 
+<span class="ball"></span>
+</label>
+<label  class="radio_button"> 
+<input type="radio" name="question54" value="-1"> 
+<span class="ball"></span>
+</label>
+<label class="radio_button">
+<input type="radio" name="question54" value="0"> 
+<span class="ball"></span>
+</label>
+<label class="radio_button">
+<input type="radio" name="question54" value="1"> 
+<span class="ball"></span>
+</label>
+<label  class="radio_button">
+<input type="radio" name="question54" value="2"> 
+<span class="ball"></span>
+</label>
+<label class="radio_button">
+<input type="radio" name="question54" value="3"> 
+<span class="ball"></span>
+</label>
+Hoàn toàn đồng tình
+</div>
+<br>
+
+<label for="question55" ><h4 class="statement">Bạn thường cảm thấy bị choáng ngợp.</h4></label> <br>
+<div class="radio_wrapper"> 
+Hoàn toàn không đồng tình &nbsp;
+<label class="radio_button"> 
+<input type="radio" name="question55" value="-3"> 
+<span class="ball"></span>
+</label>
+<label  class="radio_button">
+<input type="radio" name="question55" value="-2"> 
+<span class="ball"></span>
+</label>
+<label  class="radio_button"> 
+<input type="radio" name="question55" value="-1"> 
+<span class="ball"></span>
+</label>
+<label class="radio_button">
+<input type="radio" name="question55" value="0"> 
+<span class="ball"></span>
+</label>
+<label class="radio_button">
+<input type="radio" name="question55" value="1"> 
+<span class="ball"></span>
+</label>
+<label  class="radio_button">
+<input type="radio" name="question55" value="2"> 
+<span class="ball"></span>
+</label>
+<label class="radio_button">
+<input type="radio" name="question55" value="3"> 
+<span class="ball"></span>
+</label>
+Hoàn toàn đồng tình
+</div>
+<br>
+
+<label for="question56" ><h4 class="statement">Bạn hoàn thành công việc một cách có phương pháp, không bỏ sót bất kỳ giai đoạn nào.</h4></label> <br>
+<div class="radio_wrapper"> 
+Hoàn toàn không đồng tình &nbsp;
+<label class="radio_button"> 
+<input type="radio" name="question56" value="-3"> 
+<span class="ball"></span>
+</label>
+<label  class="radio_button">
+<input type="radio" name="question56" value="-2"> 
+<span class="ball"></span>
+</label>
+<label  class="radio_button"> 
+<input type="radio" name="question56" value="-1"> 
+<span class="ball"></span>
+</label>
+<label class="radio_button">
+<input type="radio" name="question56" value="0"> 
+<span class="ball"></span>
+</label>
+<label class="radio_button">
+<input type="radio" name="question56" value="1"> 
+<span class="ball"></span>
+</label>
+<label  class="radio_button">
+<input type="radio" name="question56" value="2"> 
+<span class="ball"></span>
+</label>
+<label class="radio_button">
+<input type="radio" name="question56" value="3"> 
+<span class="ball"></span>
+</label>
+Hoàn toàn đồng tình
+</div>
+<br>
+
+<label for="question57" ><h4 class="statement">Bạn đặc biệt thích thú trước những thứ mang tính tranh luận.</h4></label> <br>
+<div class="radio_wrapper"> 
+Hoàn toàn không đồng tình &nbsp;
+<label class="radio_button"> 
+<input type="radio" name="question57" value="-3"> 
+<span class="ball"></span>
+</label>
+<label  class="radio_button">
+<input type="radio" name="question57" value="-2"> 
+<span class="ball"></span>
+</label>
+<label  class="radio_button"> 
+<input type="radio" name="question57" value="-1"> 
+<span class="ball"></span>
+</label>
+<label class="radio_button">
+<input type="radio" name="question57" value="0"> 
+<span class="ball"></span>
+</label>
+<label class="radio_button">
+<input type="radio" name="question57" value="1"> 
+<span class="ball"></span>
+</label>
+<label  class="radio_button">
+<input type="radio" name="question57" value="2"> 
+<span class="ball"></span>
+</label>
+<label class="radio_button">
+<input type="radio" name="question57" value="3"> 
+<span class="ball"></span>
+</label>
+Hoàn toàn đồng tình
+</div>
+<br>
+
+<label for="question58" ><h4 class="statement">Bạn sẵn sàng nhường lại cơ hội của bản thân cho những người thật sự cần nó.</h4></label> <br>
+<div class="radio_wrapper"> 
+Hoàn toàn không đồng tình &nbsp;
+<label class="radio_button"> 
+<input type="radio" name="question58" value="-3"> 
+<span class="ball"></span>
+</label>
+<label  class="radio_button">
+<input type="radio" name="question58" value="-2"> 
+<span class="ball"></span>
+</label>
+<label  class="radio_button"> 
+<input type="radio" name="question58" value="-1"> 
+<span class="ball"></span>
+</label>
+<label class="radio_button">
+<input type="radio" name="question58" value="0"> 
+<span class="ball"></span>
+</label>
+<label class="radio_button">
+<input type="radio" name="question58" value="1"> 
+<span class="ball"></span>
+</label>
+<label  class="radio_button">
+<input type="radio" name="question58" value="2"> 
+<span class="ball"></span>
+</label>
+<label class="radio_button">
+<input type="radio" name="question58" value="3"> 
+<span class="ball"></span>
+</label>
+Hoàn toàn đồng tình
+</div>
+<br>
+
+<label for="question59" ><h4 class="statement">Bạn thường gặp khó khăn với deadline.</h4></label> <br>
+<div class="radio_wrapper"> 
+Hoàn toàn không đồng tình &nbsp;
+<label class="radio_button"> 
+<input type="radio" name="question59" value="-3"> 
+<span class="ball"></span>
+</label>
+<label  class="radio_button">
+<input type="radio" name="question59" value="-2"> 
+<span class="ball"></span>
+</label>
+<label  class="radio_button"> 
+<input type="radio" name="question59" value="-1"> 
+<span class="ball"></span>
+</label>
+<label class="radio_button">
+<input type="radio" name="question59" value="0"> 
+<span class="ball"></span>
+</label>
+<label class="radio_button">
+<input type="radio" name="question59" value="1"> 
+<span class="ball"></span>
+</label>
+<label  class="radio_button">
+<input type="radio" name="question59" value="2"> 
+<span class="ball"></span>
+</label>
+<label class="radio_button">
+<input type="radio" name="question59" value="3"> 
+<span class="ball"></span>
+</label>
+Hoàn toàn đồng tình
+</div>
+<br>
+
+<label for="question60" ><h4 class="statement">Bạn cảm thấy tự tin rằng mọi chuyện sẽ diễn ra theo ý bạn.</h4></label> <br>
+<div class="radio_wrapper"> 
+Hoàn toàn không đồng tình &nbsp;
+<label class="radio_button"> 
+<input type="radio" name="question60" value="-3"> 
+<span class="ball"></span>
+</label>
+<label  class="radio_button">
+<input type="radio" name="question60" value="-2"> 
+<span class="ball"></span>
+</label>
+<label  class="radio_button"> 
+<input type="radio" name="question60" value="-1"> 
+<span class="ball"></span>
+</label>
+<label class="radio_button">
+<input type="radio" name="question60" value="0"> 
+<span class="ball"></span>
+</label>
+<label class="radio_button">
+<input type="radio" name="question60" value="1"> 
+<span class="ball"></span>
+</label>
+<label  class="radio_button">
+<input type="radio" name="question60" value="2"> 
+<span class="ball"></span>
+</label>
+<label class="radio_button">
+<input type="radio" name="question60" value="3"> 
+<span class="ball"></span>
+</label>
+Hoàn toàn đồng tình
+</div>
+<br>
+<button type="submit" class="submit" onclick="">Hoàn thành</button>
+    </form>
+</div> 
+    <!-- </div> -->
+
+    <!-- </div> -->
+    <script
+    src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"
+  ></script>
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"
+  ></script>
+ 
+</body>
+</html>

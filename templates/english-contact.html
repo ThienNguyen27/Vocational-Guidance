@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/static/contact.css" rel="stylesheet" >
+    <title>About us</title>
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+    <link
+    rel="stylesheet"
+    href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+    crossorigin="anonymous"
+    />
+    <link>
+  </head>
+<body>
+  
+
+
+    <div class="box2">
+      <!--  flip-card-container --> 
+      <div class="container">
+    <div class="navbar">
+      <a href="{{url_for('index_eng')}}"><img src="static/images/logo.png" class="logo"></a>
+    
+      <lang>
+        <ul class="language">
+            <li><a href="{{url_for('contact_vn')}}">Tiếng Việt</a></li>        
+        </ul>
+    </lang>
+    
+    </div>
+
+    <div class="about-section">
+      <h1>About Us</h1>
+      <p class="intro">This project attempts to create a system that provides a prospective career path for high schoolers. The project includes 2 sections: Myers-Briggs personality test(based on 16 Personalities) and the hobbies test to help you narrow down your career options. </p>
+    </div>
+
+<div class="row">
+<!--card 1-->
+<div class="flip-card-container" >
+
+<!-- <div class="flip-card-container" style="--hue: 220"> -->
+  <div class="flip-card">
+
+    <div class="card-front">
+      <figure>
+        <div class="img-bg"></div>
+        <img src="/static/images/Minhthien.jpg" alt="Brohm Lake">
+        <figcaption>Minh Thiện</figcaption>
+      </figure>
+<div class="info">
+      <ul>
+        <li class="phone">0909181065</li>
+        <li  class="email">Daddylovecshub@gmail.com</li>
+        <li class="developers">Minh Thiện</li>
+      </ul>
+</div>
+    </div>
+
+    <div class="card-back">
+      <figure>
+        <div class="img-bg"></div>
+        <img src="/static/images/background2.jpg" alt="Brohm Lake">
+      </figure>
+
+    </div>
+
+  </div>
+</div>
+
+
+<!-- card2 -->
+<div class="flip-card-container" style="--hue: 170">
+
+  <div class="flip-card">
+
+    <div class="card-front">
+      <figure>
+        <div class="img-bg"></div>
+        <img src="/static/images/Baophuc.jpg" alt="Image 2">
+        <figcaption>Bảo Phúc</figcaption>
+      </figure>
+  <div class="info">
+      <ul>
+        <li class="phone">0367551090</li>
+        <li class="email">Daddylovecshub@gmail.com</li>
+        <li class="developers">Ryan Do</li>
+      </ul>
+</div>
+    </div>
+    <div class="card-back">
+      <figure>
+        <div class="img-bg"></div>
+        <img src="/static/images/background2.jpg" alt="image-2">
+      </figure>
+
+
+    </div>
+
+  </div>
+</div>
+</div>
+
+      </div>
+    </div>
+    <script
+    src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"
+  ></script>
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"
+  ></script>
+</body>
+</html>

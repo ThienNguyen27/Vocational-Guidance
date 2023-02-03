@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="/static/test.css" rel="stylesheet" >
+<script src="/static/index.js"></script>
+<title>Bài kiểm tra</title>
+    <link
+    rel="stylesheet"
+    href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+    crossorigin="anonymous"
+    />
+    <link>
+</head>
+<body>
+    <!-- <div class="test_box"> -->
+    <!-- <div class="test_container"> -->
+        <div class="navbar">
+            <img src="/static/images/logo.png" class="logo" >
+
+            <lang>
+                <ul class="language">
+                    <!-- <li><a href="">English</a></li> -->
+                    &nbsp;
+                </ul>
+            </lang>
+        </div>
+<div class="questions">
+
+    <p class="career_text"> Bạn thuộc nhóm tính cách: </p>
+    <h2 class="personality_type"> {{ prediction_text }} </h2>
+    
+    <!-- {% for group in Groups %} -->
+    
+        <!-- <p>{{Percent_Group}}</p> -->
+        <!-- <p>{{Label}} -->
+    <!-- {% endfor %} -->
+    <p class="career_text"> Trong đó, tỉ lệ của ba nhóm tính cách phù hợp nhất với bạn là: </p>
+    {% for i in range(0,3) %}
+        <tr>
+            <td>
+                <h2>{{ Label_Group[i]}}: {{ Percent_Group[i] }}% </h2>           
+            </td>  
+        </tr>
+    {% endfor %}
+    <br>
+    
+    <p class="career_text"> Bạn nên làm những việc sau đây: </p>
+    {% for job in jobs %}
+        <h2 class = "career">{{ job }}</h2>
+    {% endfor %} 
+    <a href="{{url_for('index_vn')}}">                  
+        <button type="button">Quay về trang chủ</button>
+    </a>
+</div> 
+
+    <!-- </div> -->
+
+    <!-- </div> -->
+    <script
+    src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"
+  ></script>
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"
+  ></script>
+ 
+</body>
+</html>

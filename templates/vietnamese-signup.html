@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="/static/style.css" rel="stylesheet" >
+<link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+<title>Đăng ký</title>
+</head>
+<body>
+  <div class="box">
+    <div class="navbar">
+      <a href="{{url_for('index_eng')}}"><img src="static/images/logo.png" class="logo"></a> <!-- go to home-->
+    </div>
+    <div class="language">
+      <label><a href="{{url_for('signup_eng')}}">English</a></label>
+    </div>
+    <div class="containerlogin">
+      <form method="POST" action="">
+      <div class="input-field">
+        <input type="text" class="input" name="email" placeholder="Email" required>
+        <i class="bx bx-envelope" ></i>
+      </div>
+      <br>
+      <div class="input-field">
+        <input type="text" class="input" name="username" placeholder="Tên đăng nhập" required>
+        <i class="bx bx-user" ></i>
+      </div>
+      <br>
+      <div class="input-field">
+        <input type="Password" class="input" name="password" placeholder="Mật khẩu"  required>
+        <i class="bx bx-lock-alt"></i>
+      </div>
+      <br>
+      <div class="input-field">
+        <input type="Password" class="input" name="reenter_password" placeholder="Re-enter Password"  required>
+        <i class="bx bx-lock-alt"></i>
+      </div>
+      <br>
+      <div class="input-field">
+        <input type="submit" class="submit" value="Sign up" >
+      </div>
+      <br>
+    </form>
+
+ 
+      <div class="signup">
+        <label><a href="{{url_for('login_vn')}}">Bạn đã có tài khoản?</a></label>
+      </div>
+      {% extends "flash.html" %} {% block title %}Login{% endblock %} {% block content%}
+      {% endblock %}  
+    </div>
+  </div>  
+</body>
+</html>

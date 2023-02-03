@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link href="/static/style.css" rel="stylesheet" >
+        <script src="/static/index.js"></script>
+    <title>Guest</title>
+
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+    <div class="box">
+    <div class="container">
+        <div class="navbar">
+            <img src="/static/images/logo.png" class="logo">
+            <lang>
+                <ul class="language">
+                    <li><a href="{{url_for('index_vn')}}">Tiếng Việt</a></li>
+                    &nbsp;
+                    <li><a href="{{url_for('login_eng')}}">Log in</a></li>
+                    &nbsp;
+                    <li><a href="{{url_for('signup_eng')}}">Sign up</a></li>  
+                    &nbsp;
+                    <li><a href="{{url_for('contact_eng')}}">About us</a></li>       
+                </ul>
+
+            </lang>
+        </div>
+        <div class="row">
+            <div class="col">
+                <h1>Vocational</h1>
+                <h1>Guidance</h1>
+                <br>
+                <p>Accurate, Free Test to Find Your Ideal Career</p>
+                <br> 
+                <h3 style="color: red">Login to take the test</h3>
+                <br> 
+            </div>
+        </div>
+
+  
+    </div>
+    </div>
+
+</body>
+
+</html>
